@@ -1,13 +1,190 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin : 0;
+  padding :0;
+}
+body{
+   font-family: 'Gabarito', sans-serif;
+}
+.Navbar{
+   padding:10px;
+  z-index: 1;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: solid black 1px;
+   gap:5px;
+   align-items: center;
+   position:sticky;
+   background-color: white;
+   top:0;
+}
+.Navbar__left__title{
+   color:#8710D8;
+}
+.Navbar__center
+{
+   width:100px;
+   border-width:1px;
+   border-style: solid;
+   border-color: black;
+   width:900px;
+   border-radius: 15px;
+   padding:10px;
+   display:flex;
+   gap:10px;
+}
+.Navbar__input{
+   border:none;
+   font-size: 16px;
+   background-color: transparent;
+
+}
+.Learning{
+   position:relative;
+   cursor: pointer;
+}
+.Learning__popup{
+   position: absolute;
+   border:solid black 2px;
+   width:100px;
+   height:50px;
+   padding:5px;
+   z-index: 2;
+   display: none;
+   background-color: white;
+}
+.Learning:hover .Learning__popup{
+   display: block;
+}
+.Navbar__Right{
+   display:flex;
+   gap:15px;
+   
+}
+.Categories{
+   display:flex;
+   padding: 10px;
+   justify-content: space-evenly;
+   border-bottom: solid black 1px;
+   
+}
+.Categories p{
+   background-color: #8710D8;
+   color: white;
+   border-radius: 15px;
+   padding: 10px;
+   cursor: pointer;
+   border:solid #8710D8 2px ;
+}
+.Categories p:hover{
+   transition:1s;
+   background-color: transparent;
+   color: #8710D8;
+   border:solid #8710D8 2px ;
+   
+
+}
+.sale__image{
+   position:relative;
+ 
+}
+.sale__image img{
+ width:100%;
+
+}
+.sale__image__offer{
+   animation-name:zoom;
+   position:absolute;
+   top:80px;
+   left:50px;
+   background-color: white;
+   width:fit-content;
+   height: 100px;
+   color: black;
+   border:solid black 5px;
+   padding:20px;
+   animation-duration: 3s;
+   opacity:0;
+   animation-fill-mode: forwards;
+}
+@keyframes zoom {
+   0%{
+       opacity: 0;
+       transform: scale(0);
+   }
+   100%{
+       opacity:1;
+       transform: scale(1);
+   }
+}
+.Recommended{
+   padding: 10px;
+
+}
+.Recommended__container{
+ display: flex;
+ justify-content: space-between;
+ margin-top:10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.course{
+  
+   width: 20%;
+}
+.course img{
+   width:100%;
+   height:50%;
+}
+.Topics{
+   padding: 20px;
+}
+
+.Topics__Container {
+   padding: 10px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+
+}
+
+.Topics__Container p{
+   background-color: #8710D8;
+   color:white;
+   border-radius: 5px;
+padding: 10px;
+   border: solid black 1px;
+   height: 20px;
+   flex-grow:1;
+   flex-basis:25%;
+}
+.Footer{
+   padding: 10px;
+   background-color: black;
+   color: white;
+}
+.Footer__one{
+   display: flex;
+   gap:10px;
+   justify-content: start;
+}
+.Footer__one p{
+   margin: 20px;
+}
+.Footer__two{
+   margin: 20px;
+}
+
+@media screen and (max-width:800px){
+   body{
+       font-size:10px;
+   }
+
+}
+@media screen and (max-width:500px){
+   
+   .course{
+       flex-basis:40%;
+   }
+   .Categories{
+       display:none;
+   }
 }
